@@ -1,0 +1,133 @@
+body.auth-page {
+    background-color: #662222;
+    /* Main Maroon Background from design */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.auth-card {
+    background-color: #FFF5E1;
+    /* Cream card background */
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.auth-logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.app-title {
+    color: #4A2c2c;
+    /* Darker brown/maroon for text */
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.app-subtitle {
+    color: #4A2c2c;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.auth-header {
+    color: #800000;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.auth-subheader {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    background-color: transparent;
+    border: 1px solid #800000;
+    border-radius: 10px;
+    padding: 12px;
+    color: #333;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #A52A2A;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.form-label {
+    text-align: left;
+    display: block;
+    color: #800000;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.btn-auth {
+    background-color: #800000;
+    /* Maroon Button */
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn-auth:hover {
+    background-color: #600000;
+    color: white;
+}
+
+.auth-footer {
+    max-width: 450px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.auth-footer a {
+    color: #800000;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #800000;
+    padding: 8px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.divider {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Hide default password toggle in Edge/IE and Chrome */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-webkit-contacts-auto-fill-button,
+input[type="password"]::-webkit-credentials-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    height: 0;
+    width: 0;
+    margin: 0;
+}

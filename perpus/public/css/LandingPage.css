@@ -1,0 +1,207 @@
+:root {
+    --primary-color: #800000;
+    /* Maroon */
+    --secondary-color: #FFF5E1;
+    /* Cream */
+    --text-dark: #333;
+    --text-light: #fff;
+    --accent-gold: #D4AF37;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+}
+
+/* HERO SECTION */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Slightly lighter overlay to show book details */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    /* Ensure left alignment */
+}
+
+.hero-content p.welcome-text {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.hero-desc {
+    font-size: 0.9rem;
+    max-width: 600px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* NAVBAR CUSTOMIZATION */
+.custom-navbar {
+    background-color: transparent !important;
+    padding-top: 10px;
+    z-index: 1000;
+}
+
+.floating-logo {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    /* Align with container gutter usually */
+    z-index: 1001;
+}
+
+.logo-navbar {
+    height: 120px;
+    /* Increased size as requested */
+    width: auto;
+    transition: height 0.3s;
+}
+
+.nav-link {
+    color: var(--text-light) !important;
+    font-weight: 600;
+    /* Bolder text */
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem !important;
+    letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+    color: var(--accent-gold) !important;
+}
+
+.btn-custom-login {
+    background-color: #5d1a1a;
+    /* Dark Maroon */
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    /* Slightly rounded, not pill */
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-custom-login:hover {
+    background-color: #800000;
+    color: white;
+    border-color: white;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    background-color: var(--secondary-color);
+    padding: 80px 0;
+}
+
+.about-section h3 {
+    color: var(--text-dark);
+}
+
+.feature-card {
+    background: transparent;
+    /* Or white if needed, design looks like transparent on cream or slightly distinct */
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    border: none;
+    transition: transform 0.3s;
+}
+
+/* If the design implies cards are distinct from bg, uncomment below */
+/* 
+.feature-card {
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+*/
+
+.feature-card .icon {
+    font-size: 1.5rem;
+    /* Smaller icon inside circle */
+    margin-bottom: 20px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-bg-red {
+    background-color: #fce8e8;
+    /* Light Pink */
+    color: #d32f2f;
+}
+
+.icon-bg-blue {
+    background-color: #e3f2fd;
+    /* Light Blue */
+    color: #1976d2;
+}
+
+.icon-bg-green {
+    background-color: #e8f5e9;
+    /* Light Green */
+    color: #388e3c;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #5D2525;
+    /* Darker Maroon from palette */
+    padding-top: 20px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.footer .section-title {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.footer-links a {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: var(--accent-gold) !important;
+}
+
+.copyright-section {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}

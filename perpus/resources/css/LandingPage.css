@@ -1,0 +1,81 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.custom-navbar {
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    padding: 16px 0;
+}
+
+.custom-navbar img {
+    height: 70px;
+}
+
+.hero-section {
+    min-height: 100vh;
+    padding-top: 140px;
+    background-image: url('/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.about-section {
+    background: #fff2d9;
+    padding: 100px 0;
+}
+
+.feature-card {
+    padding: 50px 30px;
+    border-radius: 20px;
+    border: 2px solid #e6d2bd;
+    background: transparent;
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon i {
+    font-size: 36px;
+    color: white;
+}
+
+.icon-bg-red { background: #e74c3c; }
+.icon-bg-blue { background: #3498db; }
+.icon-bg-green { background: #2ecc71; }
+
+
+.footer {
+    background: #662222;
+}
