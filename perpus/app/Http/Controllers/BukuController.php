@@ -57,7 +57,7 @@ class BukuController extends Controller
         if ($request->filled('search')) {
             $query->where(function ($q) use ($request) {
                 $q->where('judul_buku', 'like', '%' . $request->search . '%')
-                  ->orWhere('pengarang', 'like', '%' . $request->search . '%');
+                    ->orWhere('pengarang', 'like', '%' . $request->search . '%');
             });
         }
 
@@ -126,7 +126,7 @@ class BukuController extends Controller
             $peminjamanId = DB::table('peminjaman')->insertGetId([
                 'id_siswa' => $siswa->id_siswa,
                 'tanggal_pinjam' => now(),
-                'tanggal_kembali' => now()->addDays(7),
+                'tanggal_kembali' => now()->addDays(14),
                 'status' => 'Dipinjam',
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -215,6 +215,7 @@ class BukuController extends Controller
                 ->where('id_peminjaman', $id_peminjaman)
                 ->update([
                     'status' => 'Dikembalikan',
+                    'tanggal_kembali' => now(),
                     'updated_at' => now()
                 ]);
 

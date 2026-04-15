@@ -5,14 +5,14 @@
 @section('dashboard_content')
 <div class="card card-custom p-4">
     <h5 class="fw-bold mb-4">Riwayat Peminjaman</h5>
-    
+
     <div class="table-responsive">
         <table class="table table-hover align-middle">
             <thead class="table-light">
                 <tr>
                     <th class="px-3">Buku</th>
                     <th>Tanggal Pinjam</th>
-                    <th>Tanggal Kembali</th>
+                    <th>Maks Tanggal Kembali</th>
                     <th>Status</th>
                     <th class="text-center">Aksi</th>
                 </tr>
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     returnButtons.forEach(btn => {
         btn.addEventListener('click', function() {
             const id = this.getAttribute('data-id');
-            
+
             Swal.fire({
                 title: 'Konfirmasi Pengembalian',
                 text: "Apakah Anda yakin ingin mengembalikan buku ini?",

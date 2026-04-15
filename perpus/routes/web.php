@@ -27,19 +27,19 @@ Route::middleware(['auth'])->group(function () {
 
     Route::prefix('admin')->name('admin.')->group(function() {
         Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
-        
+
         // Kelola Buku
         Route::get('/buku', [App\Http\Controllers\AdminBukuController::class, 'index'])->name('buku.index');
         Route::post('/buku', [App\Http\Controllers\AdminBukuController::class, 'store'])->name('buku.store');
         Route::put('/buku/{id}', [App\Http\Controllers\AdminBukuController::class, 'update'])->name('buku.update');
         Route::delete('/buku/{id}', [App\Http\Controllers\AdminBukuController::class, 'destroy'])->name('buku.destroy');
-        
+
         // Kelola Anggota
         Route::get('/siswa', [AdminController::class, 'indexSiswa'])->name('siswa.index');
         Route::post('/siswa', [AdminController::class, 'storeSiswa'])->name('siswa.store');
         Route::put('/siswa/{id}', [AdminController::class, 'updateSiswa'])->name('siswa.update');
         Route::delete('/siswa/{id}', [AdminController::class, 'destroySiswa'])->name('siswa.destroy');
-        
+
         // Transaksi
         Route::get('/transaksi', [App\Http\Controllers\AdminTransaksiController::class, 'index'])->name('transaksi.index');
     });
